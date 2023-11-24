@@ -1,0 +1,126 @@
+body, html {
+    height: 99%;
+    margin: 0px;
+}
+
+.business-header {
+    background-color: #123456; /* 商务配色 */
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+    height: 5%;
+}
+
+.business-header h1 {
+    font-size: 1rem; /* 较小的标题字体 */
+    margin: 0;
+}
+
+.content-area {
+    display: flex;
+    height: 92%;
+}
+
+/* 其他样式 */
+
+/* 菜单栏样式 */
+.sidebar {
+    background-color: #334455; /* 示例背景色，可根据需要调整 */
+    width: 15%;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 2px 0 5px 0 rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+
+/* 调整菜单项样式 */
+.sidebar .nav-link {
+    color: white;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #556677; /* 鼠标悬浮时的背景色 */
+}
+
+/* 其他样式 */
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.business-footer {
+    background-color: #123456; /* 与header相同的颜色 */
+    color: white;
+    text-align: center;
+    height: 4%;
+    padding: 1px 0;
+    margin: 0;
+}
+
+/* Header样式 */
+header {
+    background-color: #123456; /* 示例商务配色，可根据需要调整 */
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+header .navbar-brand {
+    color: white;
+    margin-right: 2rem; /* 为品牌名称和菜单项提供一些空间 */
+}
+
+header .nav-link {
+    color: white;
+}
+
+/* Footer样式 */
+footer {
+    background-color: #123456; /* 与header背景色相同 */
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 通用的边距和填充调整 */
+.nav-item {
+    margin-left: 1rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    header .navbar-nav {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+.sidebar {
+    background-color: #334455; /* 你的颜色 */
+    /* ...其他样式... */
+}
+
+.sub-menu {
+    padding-left: 20px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #ccc;
+}
+
+/* 图标样式 */
+.bi {
+    margin-right: 8px;
+}

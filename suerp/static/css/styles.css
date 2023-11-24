@@ -1,0 +1,83 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+body {
+    font-size: 0.9rem;
+}
+
+.header, .footer {
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* 现有样式 */
+.business-header, .business-footer {
+    text-align: center;
+    background: #f8f9fa;
+}
+
+/* 修改后的header和footer高度 */
+.business-header {
+    padding: 1% 0; /* header高度为5% */
+}
+
+.business-header h1 {
+    font-size: 1.2rem; /* 标题大小调整 */
+}
+
+.business-footer {
+    padding: 1.5% 0; /* footer高度为3% */
+}
+
+/* 主要内容区域样式 */
+.main-content {
+    padding-top: 5%; /* header高度 */
+    padding-bottom: 3%; /* footer高度 */
+}
+
+.sidebar {
+    position: fixed;
+    top: 5%; /* header高度 */
+    bottom: 3%; /* footer高度 */
+    left: 0;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+/* 保留其他样式 */

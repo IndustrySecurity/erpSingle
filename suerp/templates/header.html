@@ -1,0 +1,26 @@
+<!-- templates/header.html -->
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+    <a class="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
+        苏科ERP系统
+    </a>
+
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+       
+            <!-- 当前系统时间 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">时间: <span id="current-time"></span></a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<script>
+    function updateCurrentTime() {
+        var now = new Date();
+        var timeString = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+        document.getElementById("current-time").textContent = timeString;
+    }
+    setInterval(updateCurrentTime, 1000);
+    updateCurrentTime();
+</script>

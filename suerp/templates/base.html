@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <title>{% block title %}苏科ERP系统{% endblock %}</title>
+</head>
+<body>
+        {% include 'header.html' %}
+
+    <div class="content-area">
+      <!-- ... 其他代码 ... -->
+
+      <nav class="sidebar">
+        <ul class="nav flex-column">
+            <!-- 仪表板 -->
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'dashboard' %}">
+                    <i class="bi bi-speedometer2"></i> 仪表板
+                </a>
+            </li>
+    
+            <!-- 库存管理 -->
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#inventorySubMenu" role="button" aria-expanded="false" aria-controls="inventorySubMenu">
+                    <i class="bi bi-box-seam"></i> 库存管理
+                </a>
+                <div class="collapse" id="inventorySubMenu">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="#">库存概览</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">入库管理</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">出库管理</a></li>
+                    </ul>
+                </div>
+            </li>
+    
+            <!-- 财务管理 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="bi bi-calculator"></i> 财务管理
+                </a>
+            </li>
+    
+            <!-- 人力资源 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="bi bi-people"></i> 人力资源
+                </a>
+            </li>
+    
+            <!-- 销售管理 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="bi bi-cart"></i> 销售管理
+                </a>
+            </li>
+    
+            <!-- 采购管理 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="bi bi-basket"></i> 采购管理
+                </a>
+            </li>
+    
+            <!-- 报表分析 -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="bi bi-bar-chart"></i> 报表分析
+                </a>
+            </li>
+    
+            <!-- 更多菜单项... -->
+        </ul>
+    </nav>
+    
+    
+
+<!-- ... 其他代码 ... -->
+
+
+        <main class="main-content">
+            {% block content %}
+            <!-- 页面主要内容 -->
+            {% endblock %}
+        </main>
+    </div>
+
+        {% include 'footer.html' %}
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
